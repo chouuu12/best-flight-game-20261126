@@ -1,18 +1,25 @@
-# Skyline Courier — Make the best flight game
+# best-flight-game-20261126
 
-[![make.fun bounty](https://img.shields.io/badge/make.fun-best--flight--game-ff6b35)](https://make.fun/c/best-flight-game-20261126-0057)
+[![make.fun · best-flight-game-20261126-0057](https://make.fun/badge/best-flight-game-20261126-0057.svg)](https://make.fun/bounty/best-flight-game-20261126-0057?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
+[![rank](https://make.fun/badge/best-flight-game-20261126-0057/chouuu12/best-flight-game-20261126/rank.svg)](https://make.fun/bounty/best-flight-game-20261126-0057/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
+[![reward](https://make.fun/badge/best-flight-game-20261126-0057/chouuu12/best-flight-game-20261126/reward.svg)](https://make.fun/bounty/best-flight-game-20261126-0057?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
 
-A complete, original flight game that runs in a desktop browser from static
-files — no build step, no network request. Fly a courier plane down a
-dusk-lit valley, thread golden rings, and land on short strips before the
-fuel runs out.
+Skyline Courier — a complete, original flight game that runs in a desktop browser from static files: no build step, no network request. Fly a courier plane down a dusk-lit valley, thread golden rings, and land on short strips before the fuel runs out.
 
-**Bounty:** [Make the best flight game — best-flight-game-20261126-0057](https://make.fun/c/best-flight-game-20261126-0057) ($500, top 50 share the prize)
+## Run it
+
+```sh
+python3 -m http.server 8000 --directory game
+# then open http://localhost:8000 in desktop Chrome
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057) · AI agents build software for cash rewards</sub>
 
 ## Play
 
-Open `game/index.html` in desktop Chrome (or serve `game/` with any static
-HTTP server). Keyboard + mouse:
+Open `game/index.html` in desktop Chrome (or serve `game/` with any static HTTP server). Keyboard + mouse:
 
 | Control | Action |
 | --- | --- |
@@ -29,24 +36,15 @@ HTTP server). Keyboard + mouse:
 2. **Island Hop** — land on three short island strips in order; fuel is tight.
 3. **Storm Courier** — deliver the parcel through gusting wind and five storm rings.
 
-Flying rewards throttle and turn discipline: speed buys climb, banking
-turns the nose, and below stall speed the wing quits. Fuel burns, ridges
-graze the airframe, and a touchdown only counts when it is slow, level and
-gentle.
+Flying rewards throttle and turn discipline: speed buys climb, banking turns the nose, and below stall speed the wing quits. Fuel burns, ridges graze the airframe, and a touchdown only counts when it is slow, level and gentle.
 
 ## What is in the game
 
-- Chase-view flight over a seeded, deterministic valley: patchwork fields,
-  a winding river, three ridge layers, clouds and a low sun.
-- A glass-cockpit HUD: altitude, speed, vertical speed, compass tape with
-  heading, artificial horizon, throttle, fuel and damage gauges, warnings
-  (stall, terrain, low fuel, engine out) and mission objectives.
-- Synthesised WebAudio: engine hum, wind, ring chimes, touchdown thuds and
-  stall alarms — no audio files.
-- Three missions with briefings, scoring (rings, landings, time bonus) and
-  a debrief screen.
-- Deterministic: the same mission always builds the same valley and the
-  same weather, so every flight is fair and every screenshot reproducible.
+- Chase-view flight over a seeded, deterministic valley: patchwork fields, a winding river, three ridge layers, clouds and a low sun.
+- A glass-cockpit HUD: altitude, speed, vertical speed, compass tape with heading, artificial horizon, throttle, fuel and damage gauges, warnings (stall, terrain, low fuel, engine out) and mission objectives.
+- Synthesised WebAudio: engine hum, wind, ring chimes, touchdown thuds and stall alarms — no audio files.
+- Three missions with briefings, scoring (rings, landings, time bonus) and a debrief screen.
+- Deterministic: the same mission always builds the same valley and the same weather, so every flight is fair and every screenshot reproducible.
 
 ## Layout
 
