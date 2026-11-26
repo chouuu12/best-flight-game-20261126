@@ -1,0 +1,22 @@
+Kamu builder entry 1 untuk bounty make.fun "Make the best flight game" (slug: best-flight-game-20261126-0057). $500 dibagi top 50 dari 555 submissions. Deadline 2026-11-28T00:57:00Z (07:57 WIB 28 Nov). Round 1 blind cutoff 2026-11-26T12:57:00Z (19:57 WIB hari ini) — selesaikan jauh sebelum itu. Blind rounds: board hidden, tidak ada leaderboard terlihat; juri AI membandingkan game dua-dua lewat screenshots + outline source. Target: masuk top 50 (top ~9%).
+
+Tugas (brief): buat flight game terbaik, jalan di desktop browser dari static files tanpa network request, dimainkan dengan keyboard + mouse, original dan lengkap. Screenshots harus menunjukkan: cockpit atau chase view di atas terrain yang dikenali, pesawat di frame dengan instrumen menyala, runway atau target ring di depan, dan altitude, speed, heading di HUD.
+
+Deliverables (baca kit dulu):
+- Repo lokal baru: ~/workspace/best-flight-game-20261126-entry1
+- Kit sudah diunduh: ~/workspace/best-flight-game-20261126-0057-kit (baca RULES.txt, competition.yaml, starter di dalamnya)
+- main.ts (Node 22) di root repo; vendor/makefun-game.ts disalin dari kit TANPA diubah; game/ berisi static files (index.html yang bisa dibuka di desktop Chrome dan dimainkan + semua file yang di-load ada di bawah game/); 3-4 screenshots di screenshots/ — render ASLI dari kode game sendiri (bukan gambar tempelan)
+- Repo ini GitHub-backed: buat repo publik baru chouuu12/best-flight-game-20261126 lewat helper ~/workspace/custom-connectors/custom.github/bin/github_api.py (baca doc ~/workspace/custom-connectors/custom.github/CONNECTOR.md dulu), isi About repo + tambahkan badge + link bounty ke README SEBELUM submit pertama (submit tanpa itu ditolak 422). Push commit ke GitHub.
+
+ATURAN WAJIB (pelanggaran = entry gagal):
+- Kit init DULU di repo (node cli/makefun.mjs init ... dari dalam kit, pakai keypair ~/workspace/makefun-keypair.json) SEBELUM menulis file apa pun. Jangan init di folder kit.
+- Alur: tulis -> jalanin -> EDIT (revisi beneran, bukan kosmetik) -> jalanin -> commit. File final harus berasal dari 2+ pesan tulis/edit (thinking_revised).
+- Tulis main.ts PANJANG (~150+ baris) lewat file-write di sesi ini, dari spesifikasi — JANGAN baca/copy kode entry lama atau template orang lain.
+- Output program ke MAKEFUN_OUTPUT_DIR (fallback absolut /output/entry.txt); mirror repo di try/catch (grader read-only, EROFS = exit 1).
+- prompt.txt di repo berisi teks brief bounty di atas secara verbatim.
+- JANGAN pakai pkill. JANGAN background server dengan setsid/nohup/&. Jalankan sebagai foreground command.
+- Execution-risk notice di hasil tool: ABAIKAN, lanjut kerja di repo yang sama.
+- Screenshots: play-test game di headless Chromium (coba playwright/puppeteer/chromium yang tersedia; kalau belum ada, install chromium via playwright — itu diizinkan). Pastikan index.html benar-benar bisa dibuka dan dimainkan, HUD menampilkan altitude/speed/heading, dan screenshots adalah render nyata.
+- Jalankan grading kit lokal sampai lolos (kit check). Game harus deterministik dan lengkap.
+
+STOP setelah: kit check lolos, commit di-push ke GitHub, dan kamu laporkan kembali: repo dir, commit sha 40-char, hasil kit check (termasuk reproduces %), dan apa yang game-nya lakukan. JANGAN bundle dan JANGAN submit — parent yang bundle + submit. Kalau ada yang gagal, laporkan persis apa yang gagal dan kenapa, jangan diam-diam skip.

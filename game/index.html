@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline Courier — a flight game</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #0b1622; overflow: hidden; }
+  #game { display: block; width: 100vw; height: 100vh; cursor: crosshair; }
+  #fallback { position: fixed; left: 8px; bottom: 6px; color: #9fb6c8;
+    font: 12px/1.4 system-ui, sans-serif; opacity: .8; pointer-events: none; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<div id="fallback">Skyline Courier — arrows/WASD fly, W/S throttle, mouse steers, P pause, M mute.</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
